@@ -1,0 +1,553 @@
+[
+ {
+  "id": "E01",
+  "name": "Formula 1 Miami Grand Prix",
+  "category": "Sports",
+  "sub": "Formula 1",
+  "where": "Miami, FL",
+  "when": "Usually early May",
+  "tags": [
+   "formula 1",
+   "f1",
+   "racing",
+   "motorsport",
+   "miami"
+  ]
+ },
+ {
+  "id": "E02",
+  "name": "Formula 1 United States Grand Prix",
+  "category": "Sports",
+  "sub": "Formula 1",
+  "where": "Austin, TX",
+  "when": "Usually October",
+  "tags": [
+   "formula 1",
+   "f1",
+   "racing",
+   "motorsport",
+   "austin"
+  ]
+ },
+ {
+  "id": "E03",
+  "name": "Formula 1 Las Vegas Grand Prix",
+  "category": "Sports",
+  "sub": "Formula 1",
+  "where": "Las Vegas, NV",
+  "when": "Usually November",
+  "tags": [
+   "formula 1",
+   "f1",
+   "racing",
+   "motorsport",
+   "vegas"
+  ]
+ },
+ {
+  "id": "E04",
+  "name": "Formula 1 Canadian Grand Prix",
+  "category": "Sports",
+  "sub": "Formula 1",
+  "where": "Montreal, Canada",
+  "when": "Usually June",
+  "tags": [
+   "formula 1",
+   "f1",
+   "racing",
+   "motorsport",
+   "montreal"
+  ]
+ },
+ {
+  "id": "E16",
+  "name": "New York Yankees game",
+  "category": "Sports",
+  "sub": "Baseball",
+  "where": "Yankee Stadium, Bronx, NY",
+  "when": "April to September",
+  "tags": [
+   "baseball",
+   "mlb",
+   "yankees",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E17",
+  "name": "Boston Red Sox game at Fenway Park",
+  "category": "Sports",
+  "sub": "Baseball",
+  "where": "Boston, MA",
+  "when": "April to September",
+  "tags": [
+   "baseball",
+   "mlb",
+   "red sox",
+   "fenway",
+   "boston"
+  ]
+ },
+ {
+  "id": "E18",
+  "name": "New York Mets game",
+  "category": "Sports",
+  "sub": "Baseball",
+  "where": "Citi Field, Queens, NY",
+  "when": "April to September",
+  "tags": [
+   "baseball",
+   "mlb",
+   "mets",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E19",
+  "name": "New England Patriots game",
+  "category": "Sports",
+  "sub": "Football",
+  "where": "Foxborough, MA",
+  "when": "September to January",
+  "tags": [
+   "football",
+   "nfl",
+   "patriots",
+   "boston"
+  ]
+ },
+ {
+  "id": "E20",
+  "name": "New York Giants or Jets game",
+  "category": "Sports",
+  "sub": "Football",
+  "where": "MetLife Stadium, NJ",
+  "when": "September to January",
+  "tags": [
+   "football",
+   "nfl",
+   "giants",
+   "jets",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E12",
+  "name": "The Game (Harvard-Yale)",
+  "category": "Sports",
+  "sub": "Football",
+  "where": "New Haven or Cambridge (alternates)",
+  "when": "Usually November",
+  "tags": [
+   "football",
+   "harvard-yale",
+   "tailgate",
+   "college football"
+  ]
+ },
+ {
+  "id": "E21",
+  "name": "New York Knicks game at Madison Square Garden",
+  "category": "Sports",
+  "sub": "Basketball",
+  "where": "New York, NY",
+  "when": "October to April",
+  "tags": [
+   "basketball",
+   "nba",
+   "knicks",
+   "msg",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E11",
+  "name": "US Open Tennis",
+  "category": "Sports",
+  "sub": "Tennis",
+  "where": "Queens, NY",
+  "when": "Late August to early September",
+  "tags": [
+   "tennis",
+   "us open",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E13",
+  "name": "Head of the Charles Regatta",
+  "category": "Sports",
+  "sub": "Rowing",
+  "where": "Boston, MA",
+  "when": "Usually October",
+  "tags": [
+   "rowing",
+   "regatta",
+   "boston"
+  ]
+ },
+ {
+  "id": "E14",
+  "name": "Boston Marathon (watch or run)",
+  "category": "Sports",
+  "sub": "Running",
+  "where": "Boston, MA",
+  "when": "Patriots' Day, April",
+  "tags": [
+   "running",
+   "marathon",
+   "boston"
+  ]
+ },
+ {
+  "id": "E05",
+  "name": "EDC Las Vegas",
+  "category": "Music festivals",
+  "sub": "EDM",
+  "where": "Las Vegas, NV",
+  "when": "Usually May",
+  "tags": [
+   "edm",
+   "rave",
+   "music festival",
+   "electronic",
+   "vegas"
+  ]
+ },
+ {
+  "id": "E07",
+  "name": "Ultra Music Festival",
+  "category": "Music festivals",
+  "sub": "EDM",
+  "where": "Miami, FL",
+  "when": "Usually March",
+  "tags": [
+   "edm",
+   "rave",
+   "music festival",
+   "electronic",
+   "ultra",
+   "miami"
+  ]
+ },
+ {
+  "id": "E10",
+  "name": "Electric Zoo",
+  "category": "Music festivals",
+  "sub": "EDM",
+  "where": "New York, NY",
+  "when": "Late summer (check if running)",
+  "tags": [
+   "edm",
+   "rave",
+   "electronic",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E06",
+  "name": "Coachella",
+  "category": "Music festivals",
+  "sub": "Multi-genre",
+  "where": "Indio, CA",
+  "when": "Usually April (two weekends)",
+  "tags": [
+   "music festival",
+   "coachella",
+   "indie",
+   "pop",
+   "california"
+  ]
+ },
+ {
+  "id": "E08",
+  "name": "Governors Ball",
+  "category": "Music festivals",
+  "sub": "Multi-genre",
+  "where": "New York, NY",
+  "when": "Usually June",
+  "tags": [
+   "music festival",
+   "hip hop",
+   "pop",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E09",
+  "name": "Lollapalooza",
+  "category": "Music festivals",
+  "sub": "Multi-genre",
+  "where": "Chicago, IL",
+  "when": "Usually early August",
+  "tags": [
+   "music festival",
+   "lolla",
+   "rock",
+   "pop",
+   "chicago"
+  ]
+ },
+ {
+  "id": "E22",
+  "name": "Boston Calling",
+  "category": "Music festivals",
+  "sub": "Multi-genre",
+  "where": "Boston, MA",
+  "when": "Usually late May",
+  "tags": [
+   "music festival",
+   "rock",
+   "indie",
+   "boston"
+  ]
+ },
+ {
+  "id": "E23",
+  "name": "Las Vegas club night (XS, Omnia, Zouk\u2026)",
+  "category": "Nightlife & DJ shows",
+  "sub": "Club night",
+  "where": "Las Vegas, NV",
+  "when": "Year-round, check DJ lineups",
+  "tags": [
+   "nightclub",
+   "dj",
+   "edm",
+   "club",
+   "vegas"
+  ]
+ },
+ {
+  "id": "E24",
+  "name": "NYC DJ set / warehouse party",
+  "category": "Nightlife & DJ shows",
+  "sub": "DJ show",
+  "where": "Brooklyn & Manhattan, NY",
+  "when": "Most weekends",
+  "tags": [
+   "dj",
+   "house",
+   "techno",
+   "nightclub",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E25",
+  "name": "Miami Music Week pool parties",
+  "category": "Nightlife & DJ shows",
+  "sub": "DJ show",
+  "where": "Miami Beach, FL",
+  "when": "Week of Ultra, March",
+  "tags": [
+   "dj",
+   "edm",
+   "pool party",
+   "miami"
+  ]
+ },
+ {
+  "id": "E26",
+  "name": "Boston club night",
+  "category": "Nightlife & DJ shows",
+  "sub": "Club night",
+  "where": "Boston, MA",
+  "when": "Weekends",
+  "tags": [
+   "nightclub",
+   "dj",
+   "club",
+   "boston"
+  ]
+ },
+ {
+  "id": "E27",
+  "name": "Show at Toad's Place",
+  "category": "Concerts & shows",
+  "sub": "New Haven",
+  "where": "New Haven, CT (walkable)",
+  "when": "Check the calendar",
+  "tags": [
+   "concert",
+   "live music",
+   "dance night",
+   "new haven"
+  ]
+ },
+ {
+  "id": "E28",
+  "name": "Concert at College Street Music Hall",
+  "category": "Concerts & shows",
+  "sub": "New Haven",
+  "where": "New Haven, CT (walkable)",
+  "when": "Check the calendar",
+  "tags": [
+   "concert",
+   "live music",
+   "comedy",
+   "new haven"
+  ]
+ },
+ {
+  "id": "E29",
+  "name": "Concert at Madison Square Garden",
+  "category": "Concerts & shows",
+  "sub": "NYC",
+  "where": "New York, NY",
+  "when": "Check the calendar",
+  "tags": [
+   "concert",
+   "pop",
+   "arena",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E30",
+  "name": "Broadway show",
+  "category": "Concerts & shows",
+  "sub": "NYC",
+  "where": "New York, NY",
+  "when": "Year-round",
+  "tags": [
+   "broadway",
+   "theater",
+   "musical",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E15",
+  "name": "Art Basel Miami Beach",
+  "category": "Art & culture",
+  "sub": "Art fair",
+  "where": "Miami Beach, FL",
+  "when": "Usually early December",
+  "tags": [
+   "art",
+   "museums",
+   "design",
+   "miami"
+  ]
+ },
+ {
+  "id": "E31",
+  "name": "The Met / MoMA day trip",
+  "category": "Day trips & fun",
+  "sub": "Museums",
+  "where": "New York, NY",
+  "when": "Any weekend",
+  "tags": [
+   "art",
+   "museums",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E32",
+  "name": "Yale Peabody Museum",
+  "category": "Day trips & fun",
+  "sub": "Museums",
+  "where": "New Haven, CT (on campus)",
+  "when": "Open most days",
+  "tags": [
+   "museum",
+   "dinosaurs",
+   "science",
+   "new haven"
+  ]
+ },
+ {
+  "id": "E33",
+  "name": "American Museum of Natural History",
+  "category": "Day trips & fun",
+  "sub": "Museums",
+  "where": "New York, NY",
+  "when": "Open daily",
+  "tags": [
+   "museum",
+   "science",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E34",
+  "name": "Bronx Zoo",
+  "category": "Day trips & fun",
+  "sub": "Zoos & aquariums",
+  "where": "Bronx, NY",
+  "when": "Open daily",
+  "tags": [
+   "zoo",
+   "animals",
+   "nyc"
+  ]
+ },
+ {
+  "id": "E35",
+  "name": "Connecticut's Beardsley Zoo",
+  "category": "Day trips & fun",
+  "sub": "Zoos & aquariums",
+  "where": "Bridgeport, CT (~30 min)",
+  "when": "Open daily",
+  "tags": [
+   "zoo",
+   "animals",
+   "connecticut"
+  ]
+ },
+ {
+  "id": "E36",
+  "name": "Mystic Aquarium",
+  "category": "Day trips & fun",
+  "sub": "Zoos & aquariums",
+  "where": "Mystic, CT (~1 hr)",
+  "when": "Open daily",
+  "tags": [
+   "aquarium",
+   "animals",
+   "connecticut"
+  ]
+ },
+ {
+  "id": "E37",
+  "name": "Six Flags New England",
+  "category": "Day trips & fun",
+  "sub": "Amusement parks",
+  "where": "Agawam, MA (~1 hr)",
+  "when": "Spring to fall, Fright Fest in October",
+  "tags": [
+   "amusement park",
+   "roller coasters",
+   "theme park"
+  ]
+ },
+ {
+  "id": "E38",
+  "name": "Lake Compounce",
+  "category": "Day trips & fun",
+  "sub": "Amusement parks",
+  "where": "Bristol, CT (~45 min)",
+  "when": "Summer season",
+  "tags": [
+   "amusement park",
+   "roller coasters",
+   "water park",
+   "connecticut"
+  ]
+ },
+ {
+  "id": "E39",
+  "name": "Coney Island (Luna Park)",
+  "category": "Day trips & fun",
+  "sub": "Amusement parks",
+  "where": "Brooklyn, NY",
+  "when": "Spring to fall",
+  "tags": [
+   "amusement park",
+   "boardwalk",
+   "beach",
+   "nyc"
+  ]
+ }
+]

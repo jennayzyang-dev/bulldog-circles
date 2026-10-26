@@ -1,0 +1,18 @@
+PASS rejects non-Yale email
+PASS rejects look-alike domain
+PASS accepts Yale email
+PASS hides injected bio
+PASS scrubs phone + instagram
+PASS 'ignore' is not mistaken for a handle
+PASS insta handle still scrubbed
+PASS public view has no email
+PASS friends-only user never in dating
+PASS dating needs preferences both ways
+PASS mutual dating match allowed
+PASS blocked user never shown
+PASS you never match yourself
+PASS undergrad filter keeps Yale College
+PASS undergrad filter drops SOM
+PASS grad filter drops Yale College
+PASS grad clubs exclude undergrad-only
+PASS grad clubs include SOM clubs
