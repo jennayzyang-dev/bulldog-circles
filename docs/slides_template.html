@@ -6,171 +6,210 @@
 <title>Bulldog Circles · MGT 409 final project</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap">
 <style>
-  :root { --r-main-font: Inter, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; --r-heading-font: "Playfair Display", Georgia, serif;
-          --r-heading-color: #00356B; --r-main-color: #1B1F24; --r-link-color: #3E5F86; --r-main-font-size: 34px; }
-  .reveal h1, .reveal h2 { text-transform: none; font-weight: 600; letter-spacing: -.01em; }
-  .reveal h1 { font-size: 2.6em; } .reveal h2 { font-size: 1.6em; margin-bottom: .5em; }
+  :root { --navy:#00356B; --steel:#3E5F86; --sky:#EAF1F8; --sky2:#DCE8F4; --line:#C9D9EA; --slate:#4A5D75; --rose:#A3456A; --rose-soft:#F8EFF3;
+          --r-main-font: Inter, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; --r-heading-font: "Playfair Display", Georgia, serif;
+          --r-heading-color: #00356B; --r-main-color: #1B1F24; --r-link-color: #3E5F86; --r-main-font-size: 30px; }
+  .reveal-viewport { background: radial-gradient(1200px 600px at 92% -10%, #DCE6F2 0%, transparent 60%),
+                                 radial-gradient(900px 500px at -10% 110%, #F3E7EC 0%, transparent 55%), #FBFCFE; }
+  .reveal h1, .reveal h2, .reveal h3 { text-transform: none; font-weight: 700; letter-spacing: -.015em; }
+  .reveal h1 { font-size: 3em; line-height: 1.02; margin: 0 0 .25em; }
+  .reveal h2 { font-size: 1.75em; line-height: 1.1; margin: 0 0 .55em; }
   .reveal section { text-align: left; }
-  .reveal .muted { color: #5F6B7A; } .reveal .small { font-size: .62em; }
-  .eyebrow { display: inline-block; font-size: .45em; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: #00356B;
-             background: #EAF1F8; border: 1px solid #C9D9EA; border-radius: 999px; padding: 6px 16px; margin-bottom: .6em; }
-  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
-  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: .4em; }
-  .card { background: #EAF1F8; border: 1px solid #C9D9EA; border-radius: 18px; padding: 18px 20px; font-size: .62em; line-height: 1.4; }
-  .card b { display: block; color: #00356B; font-size: 1.15em; margin-bottom: 4px; }
-  .card.rose { background: #F8EFF3; border-color: #E4C6D0; } .card.rose b { color: #A3456A; }
-  .big { font-family: "Playfair Display", Georgia, serif; color: #00356B; font-size: 2.1em; line-height: 1; display: block; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: .6em; }
-  .kpi { background: #EAF1F8; border-radius: 18px; padding: 20px 18px; }
-  .kpi span { font-size: .5em; color: #4A5D75; display: block; margin-top: 6px; line-height: 1.3; }
-  .reveal img.shot { border: 1px solid #E3E6EA; border-radius: 14px; box-shadow: 0 12px 30px rgba(0,53,107,.10); margin: 0; }
-  .reveal ul { font-size: .78em; line-height: 1.45; } .reveal li { margin: .25em 0; }
-  .quote { font-family: "Playfair Display", Georgia, serif; font-size: .95em; color: #00356B; border-left: 4px solid #3E5F86; padding-left: 18px; margin: .4em 0; }
-  table.t { font-size: .55em; width: 100%; border-collapse: collapse; } table.t th { background: #EAF1F8; color: #00356B; }
-  table.t th, table.t td { padding: 8px 12px; border-bottom: 1px solid #E3E6EA; text-align: left; }
-  table.t td.n, table.t th.n { text-align: right; }
-  .reveal .slides section .bg-soft { position: absolute; inset: -40px; background: radial-gradient(circle at 85% 12%, #DCE6F2 0, transparent 40%), linear-gradient(180deg, #F2F5F9 0%, #fff 70%); z-index: -1; }
-  .rings { display: inline-block; width: 64px; height: 40px; position: relative; vertical-align: middle; margin-right: 10px; }
-  .rings::before, .rings::after { content: ""; position: absolute; top: 2px; width: 34px; height: 34px; border-radius: 50%; border: 4px solid #00356B; }
-  .rings::after { left: 22px; border-color: #A3456A; }
+  .reveal p { margin: .35em 0; line-height: 1.4; }
+  .muted { color: var(--slate); } .small { font-size: .62em; } .tiny { font-size: .5em; }
+  .kicker { display: inline-flex; align-items: center; gap: 10px; font-size: .45em; letter-spacing: .14em; text-transform: uppercase;
+            font-weight: 700; color: var(--steel); margin-bottom: .5em; }
+  .kicker::before { content: ""; width: 34px; height: 3px; border-radius: 3px; background: var(--rose); }
+  .pill { display: inline-block; font-size: .42em; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--navy);
+          background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 7px 16px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .cols.wide-left { grid-template-columns: 1.15fr .85fr; }
+  .card { background: #fff; border: 1px solid #E3E9F1; border-radius: 22px; padding: 22px 24px; box-shadow: 0 10px 30px rgba(0,53,107,.06); }
+  .card h3 { font-family: Inter, sans-serif; font-size: .78em; color: var(--navy); margin: .35em 0 .25em; letter-spacing: 0; }
+  .card p { font-size: .6em; color: #3B4654; margin: 0; }
+  .num { width: 46px; height: 46px; border-radius: 14px; background: var(--sky); color: var(--navy); display: grid; place-items: center;
+         font-weight: 700; font-size: .62em; }
+  .num.rose { background: var(--rose-soft); color: var(--rose); }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .stat { background: #fff; border: 1px solid #E3E9F1; border-radius: 22px; padding: 22px 22px 18px; box-shadow: 0 10px 30px rgba(0,53,107,.06); }
+  .stat b { display: block; font-family: "Playfair Display", Georgia, serif; font-size: 1.9em; line-height: 1; color: var(--navy); }
+  .stat span { display: block; font-size: .48em; color: var(--slate); margin-top: 10px; line-height: 1.35; }
+  .stat.hero { background: linear-gradient(160deg, var(--sky) 0%, #fff 100%); }
+  .quote { background: #fff; border: 1px solid #E3E9F1; border-radius: 22px; padding: 20px 24px; box-shadow: 0 10px 30px rgba(0,53,107,.06);
+           font-family: "Playfair Display", Georgia, serif; color: var(--navy); font-size: .82em; line-height: 1.3; position: relative; }
+  .quote::before { content: "“"; position: absolute; top: -22px; left: 18px; font-size: 2.6em; color: var(--rose); line-height: 1; }
+  .quote small { display: block; font-family: Inter, sans-serif; font-size: .58em; color: var(--slate); margin-top: 10px; }
+  .frame { background: #fff; border-radius: 16px; box-shadow: 0 22px 50px rgba(0,53,107,.16); overflow: hidden; border: 1px solid #E3E9F1; }
+  .frame .bar { height: 26px; background: #F3F6FA; border-bottom: 1px solid #E3E9F1; display: flex; align-items: center; gap: 7px; padding: 0 12px; }
+  .frame .bar i { width: 10px; height: 10px; border-radius: 50%; background: #D5DCE5; display: block; }
+  .reveal .frame img { display: block; width: 100%; margin: 0; border: 0; max-height: none; }
+  .tilt-r { transform: perspective(1400px) rotateY(-8deg) rotateX(2deg); }
+  .tilt-l { transform: perspective(1400px) rotateY(8deg) rotateX(2deg); }
+  .caption { font-size: .48em; color: var(--slate); margin-top: 14px; text-align: center; }
+  .rings { display: inline-block; width: 70px; height: 46px; position: relative; vertical-align: middle; margin-right: 12px; }
+  .rings::before, .rings::after { content: ""; position: absolute; top: 4px; width: 38px; height: 38px; border-radius: 50%; border: 4px solid var(--navy); }
+  .rings::after { left: 26px; border-color: var(--rose); }
+  table.t { font-size: .5em; width: 100%; border-collapse: separate; border-spacing: 0; background: #fff; border-radius: 18px; overflow: hidden;
+            border: 1px solid #E3E9F1; box-shadow: 0 10px 30px rgba(0,53,107,.06); }
+  table.t th { background: var(--sky); color: var(--navy); font-weight: 600; border: 0; }
+  table.t th, table.t td { padding: 11px 16px; border-bottom: 1px solid #EEF2F6; text-align: left; }
+  table.t tr:last-child td { border-bottom: 0; }
+  table.t .n { text-align: right; font-variant-numeric: tabular-nums; }
+  .check li { list-style: none; position: relative; padding-left: 34px; margin: .45em 0; font-size: .62em; line-height: 1.35; }
+  .check { padding: 0; margin: 0; }
+  .check li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--sky);
+                      color: var(--navy); font-size: .8em; display: grid; place-items: center; font-weight: 700; }
+  .diagram-card { background: #fff; border: 1px solid #E3E9F1; border-radius: 22px; padding: 10px 14px; box-shadow: 0 10px 30px rgba(0,53,107,.06); }
+  .footer { position: fixed; left: 34px; bottom: 18px; font: 13px Inter, -apple-system, Helvetica, Arial, sans-serif; color: #8A97A8; letter-spacing: .04em; z-index: 10; }
+  .footer b { color: var(--navy); font-family: "Playfair Display", Georgia, serif; font-size: 15px; letter-spacing: 0; }
+  .reveal .slide-number { background: transparent; color: #8A97A8; font: 13px Inter, sans-serif; right: 96px; bottom: 16px; }
+  .reveal .controls { color: var(--steel); }
+  .reveal .progress { color: var(--rose); height: 4px; }
 </style>
 </head>
 <body>
+<div class="footer"><b>Bulldog Circles</b> &nbsp;·&nbsp; MGT 409 final project · Jenna Yang</div>
 <div class="reveal"><div class="slides">
 
 <!-- 1. Title -->
 <section>
-  <div class="bg-soft"></div>
-  <span class="eyebrow">MGT 409 · Final project · Jenna Yang</span>
-  <h1><span class="rings"></span>Bulldog Circles</h1>
-  <p style="font-size:1.05em;max-width:900px">Find something to do, and people to do it with, across every Yale school.</p>
-  <p class="small muted">AI friend matching · shared events calendar · opt-in dating · built on gpt-6-luna<br>github.com/jennayzyang-dev/bulldog-circles</p>
+  <div class="cols wide-left">
+    <div>
+      <span class="pill">MGT 409 · Final project</span>
+      <h1 style="margin-top:.45em"><span class="rings"></span>Bulldog<br>Circles</h1>
+      <p style="font-size:1.05em;color:#2B3644">Find something to do, and people to do it with, across every Yale school.</p>
+      <p class="small muted" style="margin-top:1em">AI friend matching · shared events calendar · opt-in dating<br>Jenna Yang · github.com/jennayzyang-dev/bulldog-circles</p>
+    </div>
+    <div class="frame tilt-r"><div class="bar"><i></i><i></i><i></i></div><img src="{{IMG:screenshots/04_home_signed_in.png}}" alt="Home"></div>
+  </div>
 </section>
 
 <!-- 2. Problem -->
 <section>
-  <h2>The problem</h2>
+  <span class="kicker">01 · The problem</span>
+  <h2>Yale is big. Your circle isn't.</h2>
   <div class="cols">
     <div>
-      <p>About 15,000 Yale students in a dozen-plus schools, and most social life stays inside your own school.</p>
-      <p class="muted" style="font-size:.8em">"Who at Yale also loves F1 or EDM, is free on weekends, and is already going?" Nobody can search that today.</p>
+      <p style="font-size:.85em">About 15,000 students in a dozen-plus schools, and most social life stays inside your own school.</p>
+      <p class="small muted" style="margin-top:.8em">"Who at Yale also loves F1 or EDM, is free on weekends, and is already going?" Nobody can search that today.</p>
+      <div class="stat hero" style="margin-top:1em;max-width:420px"><b>5–10 days</b><span>to find company for one event today, through friends of friends and group chats</span></div>
     </div>
-    <div>
-      <p class="quote">"Friends' friends or Facebook groups… join random group chats."<br><span class="small muted">Abi, Law School</span></p>
-      <p class="quote">"Just close circles, friends' friends."<br><span class="small muted">William, School of Medicine</span></p>
-      <p style="font-size:.75em">Finding company for one event: <b>a few days</b> (William: 5–10 days).</p>
+    <div style="display:grid;gap:30px">
+      <div class="quote">Friends' friends or Facebook groups… join random group chats.<small>Abi · Law School</small></div>
+      <div class="quote">Just close circles, friends' friends.<small>William · School of Medicine</small></div>
     </div>
   </div>
 </section>
 
 <!-- 3. What is new -->
 <section>
-  <h2>What is new</h2>
-  <div class="cards">
-    <div class="card"><b>Events + people together</b>A calendar of tonight's meetups and big trips, and for each one, who from Yale is going.</div>
-    <div class="card"><b>AI that explains matches</b>"You both listed EDM and are going to the F1 watch party." Facts only, never invented.</div>
-    <div class="card"><b>Yale-only, every school</b>@yale.edu sign-in, undergrad / grad filter, cross-school by design.</div>
+  <span class="kicker">02 · What is new</span>
+  <h2>Plans first, people next, AI explains why</h2>
+  <div class="grid3">
+    <div class="card"><div class="num">1</div><h3>Events + people together</h3><p>A calendar of tonight's meetups and big trips, and for each one, who from Yale is going.</p></div>
+    <div class="card"><div class="num">2</div><h3>Matches with reasons</h3><p>"You both listed EDM and are going to the F1 watch party." Facts both people wrote, never invented.</p></div>
+    <div class="card"><div class="num rose">3</div><h3>Yale-only and safe</h3><p>@yale.edu sign-in, every school, chat only after a mutual yes, dating opt-in and hidden by default.</p></div>
   </div>
-  <p class="small muted" style="margin-top:1em">vs. Yale Connect (clubs, not people) · group chats (must already know them) · Eventbrite (no Yale crowd) · Bumble BFF / Hinge (not Yale, photo-first) · ChatGPT (knows nobody at Yale)</p>
+  <p class="tiny muted" style="margin-top:1.4em">Compared with: Yale Connect (clubs, not people) · group chats (you must already know them) · Eventbrite (no Yale crowd) · Bumble BFF / Hinge (not Yale, photo-first) · ChatGPT (knows nobody at Yale)</p>
 </section>
 
 <!-- 4. Agents -->
 <section>
+  <span class="kicker">03 · The agents</span>
   <h2>Six small agents, Python in charge</h2>
-  <div style="background:#fff;border:1px solid #E3E6EA;border-radius:16px;padding:6px">{{SVG}}</div>
-  <p class="small muted">Intake · Matcher (tools: search students, clubs) · Icebreaker · Message check · Photo check · Selfie check, all on gpt-6-luna with typed outputs.</p>
+  <div class="diagram-card">{{SVG}}</div>
+  <p class="tiny muted" style="margin-top:.8em">Intake · Matcher (tools: search students, clubs) · Icebreaker · Message check · Photo check · Selfie check. All on gpt-6-luna with typed outputs.</p>
 </section>
 
-<!-- 5. Demo screenshots -->
+<!-- 5. Demo: friends -->
 <section>
-  <h2>The app</h2>
-  <div class="cols" style="gap:22px">
-    <img class="shot" src="{{IMG:screenshots/04_home_signed_in.png}}" alt="Home">
-    <img class="shot" src="{{IMG:screenshots/07_friends_ai_matches.png}}" alt="AI matches">
+  <span class="kicker">04 · The app</span>
+  <h2>Your week, and friends picked for you</h2>
+  <div class="cols" style="gap:34px">
+    <div class="frame tilt-l"><div class="bar"><i></i><i></i><i></i></div><img src="{{IMG:screenshots/04_home_signed_in.png}}" alt="Home"></div>
+    <div class="frame tilt-r"><div class="bar"><i></i><i></i><i></i></div><img src="{{IMG:screenshots/07_friends_ai_matches.png}}" alt="AI matches"></div>
   </div>
-  <p class="small muted">Left: "Hi Maya, here's your week". Right: AI top picks, each with a reason.</p>
+  <p class="caption">Left: "Hi Maya, here's your week" · Right: AI top picks, each with a reason</p>
 </section>
 
+<!-- 6. Demo: events -->
 <section>
-  <h2>Events: who's going, and a calendar</h2>
-  <div class="cols" style="gap:22px">
-    <img class="shot" src="{{IMG:screenshots/05_calendar.png}}" alt="Calendar">
-    <img class="shot" src="{{IMG:screenshots/06_whos_going.png}}" alt="Who's going">
+  <span class="kicker">04 · The app</span>
+  <h2>See who's going, then go together</h2>
+  <div class="cols" style="gap:34px">
+    <div class="frame tilt-l"><div class="bar"><i></i><i></i><i></i></div><img src="{{IMG:screenshots/05_calendar.png}}" alt="Calendar"></div>
+    <div class="frame tilt-r"><div class="bar"><i></i><i></i><i></i></div><img src="{{IMG:screenshots/06_whos_going.png}}" alt="Who's going"></div>
   </div>
-  <p class="small muted">Upcoming days as columns · I'm going · Who's going · Add to calendar (.ics)</p>
+  <p class="caption">Upcoming days as columns · I'm going · Who's going · Add to calendar (.ics)</p>
 </section>
 
-<!-- 6. Cost -->
+<!-- 7. Cost -->
 <section>
-  <h2>Cost: under a cent per student per month</h2>
+  <span class="kicker">05 · Tokenomics</span>
+  <h2>Under a cent per student per month</h2>
+  <div class="grid4" style="margin-bottom:22px">
+    <div class="stat hero"><b>$0.009</b><span>per active user / month</span></div>
+    <div class="stat"><b>$0.90</b><span>100 users / month</span></div>
+    <div class="stat"><b>$90</b><span>10,000 users / month</span></div>
+    <div class="stat"><b>56%</b><span>of matcher input cached (club catalog)</span></div>
+  </div>
   <table class="t">
-    <tr><th>Measured (59 runs)</th><th class="n">Input</th><th class="n">Cached</th><th class="n">Output</th><th class="n">Cost</th></tr>
+    <tr><th>Measured over 59 real runs</th><th class="n">Input</th><th class="n">Cached</th><th class="n">Output</th><th class="n">Cost / run</th></tr>
     <tr><td>Find my friends (matcher)</td><td class="n">7,695</td><td class="n">4,318</td><td class="n">869</td><td class="n">$0.00089</td></tr>
     <tr><td>Save profile (intake)</td><td class="n">366</td><td class="n">0</td><td class="n">126</td><td class="n">$0.00010</td></tr>
     <tr><td>Message check</td><td class="n">232</td><td class="n">0</td><td class="n">26</td><td class="n">$0.000036</td></tr>
   </table>
-  <div class="kpis">
-    <div class="kpi"><b class="big">$0.009</b><span>per active user / month</span></div>
-    <div class="kpi"><b class="big">$0.90</b><span>100 users / month</span></div>
-    <div class="kpi"><b class="big">$90</b><span>10,000 users / month</span></div>
-    <div class="kpi"><b class="big">56%</b><span>of matcher input cached (club catalog)</span></div>
-  </div>
 </section>
 
-<!-- 7. Safety -->
+<!-- 8. Safety -->
 <section>
+  <span class="kicker">06 · Safety</span>
   <h2>Safety rules live in code</h2>
-  <div class="cols">
-    <ul>
-      <li><b>Prompt injection:</b> bios that say "ignore previous instructions" are hidden (planted test bio blocked 21×)</li>
-      <li><b>No leaks:</b> agents never see emails; phone numbers and handles scrubbed</li>
-      <li><b>No invented people:</b> every AI-returned ID checked</li>
+  <div class="cols wide-left">
+    <ul class="check">
+      <li><b>Prompt injection:</b> bios saying "ignore previous instructions" are hidden before the AI sees them</li>
+      <li><b>No leaks:</b> agents never see emails; phone numbers and handles are scrubbed</li>
+      <li><b>No invented people:</b> every ID the AI returns is checked</li>
       <li><b>Dating opt-in both ways,</b> blocks enforced in Python</li>
-      <li><b>Caps:</b> 6 requests / 60k tokens per run · 18/18 tests pass</li>
+      <li><b>Caps:</b> 6 requests / 60k tokens per run · 18/18 safety tests pass</li>
     </ul>
-    <img class="shot" src="{{IMG:screenshots/09_chat_safety_nudge.png}}" alt="Message check">
+    <div class="frame tilt-r"><div class="bar"><i></i><i></i><i></i></div><img src="{{IMG:screenshots/09_chat_safety_nudge.png}}" alt="Message check"></div>
   </div>
 </section>
 
-<!-- 8. Impact -->
+<!-- 9. Impact -->
 <section>
+  <span class="kicker">07 · Impact</span>
   <h2>Real users: days → about a minute</h2>
-  <div class="kpis">
-    <div class="kpi"><b class="big">1:18</b><span>avg. to find people going to an event (was "a few days")</span></div>
-    <div class="kpi"><b class="big">&lt;8 min</b><span>new account → chatting with a match</span></div>
-    <div class="kpi"><b class="big">5 · 3</b><span>out of 5: "would you use it?"</span></div>
-    <div class="kpi"><b class="big">6/6</b><span>issues they found, fixed the same day</span></div>
+  <div class="grid4">
+    <div class="stat hero"><b>1:18</b><span>average time to find people going to an event (was "a few days")</span></div>
+    <div class="stat"><b>&lt;8 min</b><span>new account → chatting with a match</span></div>
+    <div class="stat"><b>5 · 3</b><span>out of 5: "would you use it?" (Abi · William)</span></div>
+    <div class="stat"><b>6/6</b><span>issues they found, fixed the same day</span></div>
   </div>
-  <p class="quote" style="margin-top:.8em">"Easy to set up events and to find friends." <span class="small muted">William</span> &nbsp; "Multi use app." <span class="small muted">Abi</span></p>
+  <div class="cols" style="margin-top:34px;gap:28px">
+    <div class="quote">Easy to set up events and to find friends.<small>William · School of Medicine</small></div>
+    <div class="quote">Multi use app.<small>Abi · Law School</small></div>
+  </div>
 </section>
 
-<!-- 9. Next steps -->
+<!-- 10. Next steps -->
 <section>
-  <h2>Limits and next steps</h2>
-  <div class="cols">
-    <div>
-      <p class="small"><b>Limits today</b></p>
-      <ul>
-        <li>Sample students and meetups (needs real users)</li>
-        <li>Two testers, one day</li>
-        <li>Demo sign-in, runs on one laptop</li>
-      </ul>
-    </div>
-    <div>
-      <p class="small"><b>Next</b></p>
-      <ul>
-        <li>Yale NetID login + hosting, pilot with one SOM section</li>
-        <li>Event feed from Yale Connect</li>
-        <li>Group matching for events (3–5 people)</li>
-        <li>Measure matches → actual meetups</li>
-      </ul>
-    </div>
+  <span class="kicker">08 · What's next</span>
+  <h2>From a laptop demo to a Yale pilot</h2>
+  <div class="cols" style="align-items:stretch">
+    <div class="card"><div class="num rose">!</div><h3>Limits today</h3>
+      <ul class="check" style="margin-top:.4em"><li>Sample students and meetups until real students join</li><li>Two testers on one day</li><li>Demo sign-in, runs on one laptop</li></ul></div>
+    <div class="card"><div class="num">→</div><h3>Next</h3>
+      <ul class="check" style="margin-top:.4em"><li>Yale NetID login and hosting, pilot with one SOM section</li><li>Event feed from Yale Connect</li><li>Group matching for events (3–5 people)</li><li>Measure matches → real meetups</li></ul></div>
   </div>
 </section>
 
 </div></div>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
-<script>Reveal.initialize({ hash: true, width: 1280, height: 760, margin: 0.06, transition: "fade" });</script>
+<script>Reveal.initialize({ hash: true, width: 1280, height: 760, margin: 0.07, transition: "fade", slideNumber: "c/t" });</script>
 </body>
 </html>
